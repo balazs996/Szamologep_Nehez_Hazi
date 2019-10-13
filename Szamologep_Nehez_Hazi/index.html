@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>Nehéz számológép</title>
+        <meta charset="utf-8" />
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="stylesheet" href="stilus.css">
+    </head>
+    <body>
+        <form name="urlap">
+            <fieldset>
+                <legend>Számológép</legend>
+                <input type="text" id="ablak" /> <input type="text" id="ablak2"><br />
+                <input class=gomb type="button" value="1" id="1" onclick="egy()" />
+                <input class=gomb type="button" value="2" id="2" onclick="ketto()" />
+                <input class=gomb type="button" value="3" id="3" onclick="harom()" />
+                <input class=gomb type="button" value="4" id="4" onclick="negy()" />
+                <input class=gomb type="button" value="5" id="5" onclick="ot()" /><br />
+                <input class=gomb type="button" value="6" id="6" onclick="hat()" />
+                <input class=gomb type="button" value="7" id="7" onclick="het()" />
+                <input class=gomb type="button" value="8" id="8" onclick="nyolc()" />
+                <input class=gomb type="button" value="9" id="9" onclick="kilenc()" />
+                <input class=gomb type="button" value="0" id="0" onclick="nulla()" /><br />
+                <input class=gomb type="button" value="+" onclick="ossz()" />
+                <input class=gomb type="button" value="-" onclick="kivon()" />
+                <input class=gomb type="button" value="*" onclick="szoroz()" />
+                <input class=gomb type="button" value="/" onclick="oszt()" />
+                <input class=gomb type="button" value="=" onclick="ered()" ><br />
+                <input class=gomb type="button" value="&lt;=" onclick="visszaTorol()" />
+                <input class=gomb type="button" value="CE" onclick="utolso()" />
+                <input class=gomb type="button" value="C" onclick="torol()" />
+                <input class=gomb type="button" value="M+" onclick="memoryPlus()" />
+                <input class=gomb type="button" value="RM" onclick="memoryRead()" />
+                <input class=gomb type="button" value="+/-" onclick="negativ()" style="text-align: center;">
+            </fieldset>
+        </form>
+        <script src="szamol.js"></script>
+    </body>
+</html>

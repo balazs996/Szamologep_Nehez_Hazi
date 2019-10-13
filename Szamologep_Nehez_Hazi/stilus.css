@@ -1,0 +1,42 @@
+input[type="button"] {
+    width: 35px;
+    margin: 5px;
+}
+
+input[type="text"] {
+    width: 238px;
+}
+fieldset {
+    width: 274px;
+    border: 3px crimson solid;
+    background-color: darkgray;
+}
+legend {
+    text-align: center;
+    color: red;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#ablak2{
+    width: 20px;
+}
+
+.gomb{
+    font-size: 14px;
+    border-radius: 50%;
+    background-color: crimson;
+}
+
+ .gomb:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 14px;
+ }
+
+ #ablak{
+    border-radius: 10%;
+ }
+
+ #ablak2{
+     border-radius: 10%;
+ }
