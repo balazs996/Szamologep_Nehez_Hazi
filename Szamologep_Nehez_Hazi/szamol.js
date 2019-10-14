@@ -2,12 +2,12 @@
 
 let kiir = 0;
 let feltolt = "";
-let feltolt2 = "";
+let feltolt2 = "";/*a kicsi ablakhoz kellett*/
 let elsoSzam = ""; 
 let masodikSzam = "";
 let muvelet = ""; 
 let tomb = [];
-let minuszegyszer = "-1";
+let minuszegyszer = "-1";/*értelemszerűen a -1-es művelethez*/
 
 function egy() {
     feltolt += 1;
@@ -108,6 +108,7 @@ function torol() {
 }
 
 function memoryPlus() {
+    /*itt a feltolt2-ig az if-től, az kb annyi akar lenni hogy ha megnyomom az M+ gombot akkor pici mezőben a M-t kiirja*/
     if (feltolt2.length != 0) {
         feltolt2 = "";
     }
@@ -119,23 +120,26 @@ function memoryPlus() {
 }
 
 function memoryRead() {
+    /*pretty much the same csak itt kitörli az M-et ha már olvastam a memóriát*/
     if (feltolt2.length != 0) {
         feltolt2 = "";
     }
     document.getElementById("ablak2").value = feltolt2;
+    
     let osszeg = 0;
     for (let i = 0; i < tomb.length; i++) {
         osszeg += +tomb[i];
     }
     document.getElementById("ablak").value = osszeg;
 }
-
+/*ez a -1-el való beszorzásos művelet */
 function negativ() {
     elsoSzam = +feltolt;
     feltolt = "";
     muvelet = "minuszegy";
     document.getElementById("ablak").value = "";
 }
+
 
 function ered() {
     masodikSzam = +feltolt;
@@ -153,8 +157,31 @@ function ered() {
         case "osztás":
             document.getElementById("ablak").value = +elsoSzam / +masodikSzam;
             break;
+            /*a minuszegy-es case-t írtam hozzá*/
         case "minuszegy":    
             document.getElementById("ablak").value = +elsoSzam * +minuszegyszer;
             break;
     }
 }
+
+/* ahogy a tanár csinálta
+
+function memoryPlus() {
+    tomb.push(feltolt);
+    let szoveg = "                                M";      Ez az amit nemértek, hogy miért jobb hogy ilyen "odarakok sok space-t" megoldással csinálta. Elég scuffed
+    for (let i = 0; i < szoveg.length; i++) {
+        if (i < feltolt.length) {
+            kiir = kiir.concat(feltolt.charAt(i));
+        }
+        else {
+            kiir = kiir.concat(szoveg.charAt(i));
+        }
+    }
+    document.getElementById("ablak").value = kiir;
+    kiir = "";
+    feltolt = "";
+}
+
+Amikhez odaírtam azok csináltam házinak, a többi az mind órai munka amit tanárral együtt kellett
+
+*/
